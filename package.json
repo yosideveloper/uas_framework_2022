@@ -1,0 +1,31 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^3.4.1",
+    "bootstrap-icons": "^1.7.2",
+    "busboy": "^0.2.14",
+    "dotenv": "^11.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "fs": "^0.0.1-security",
+    "gridfs-stream": "^1.1.1",
+    "mongoose": "^6.1.6",
+    "multer": "^1.4.4",
+    "multer-gridfs-storage": "^5.0.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

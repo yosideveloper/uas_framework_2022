@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <%- include ('../components/head') %>
+        <title>Home</title>
+</head>
+
+<body>
+
+    <%- include ('../components/navbar2') %>
+
+        <div class="container" style="margin-top: 40px;">
+
+            <div class="row justify-content-center">
+                <!-- <h1 class="my-4 ">Deskripsi Produk
+                </h1> -->
+                <div class="col-md-4">
+                    <img class="img-fluid"
+                        src="data:image/<%=project.img.contentType%>;base64,<%=project.img.data.toString('base64')%>"
+                        alt="image-produk">
+                </div>
+
+                <div class="col-md-4">
+                    <h3 class="my-3">
+                        <%= project.jdlproject %>
+                    </h3>
+                    <p class="card-text">Pemilihan palet warna yang tepat dan banyaknya animasi pada situs
+                        membuat kamu tidak jenuh untuk terus melihat semua hal
+                        yang ada di portofolio ini.
+
+                        Salah satu hal yang paling menonjol dari portofolio ini adalah meskipun dipenuhi
+                        dengan animasi, situs ini tidak
+                        membutuhkan loading sama sekali dan semua fitur dalam situs dapat dibuka dalam waktu
+                        sekejap..</p>
+
+                    <ul>
+                        <li><b>ID Project:</b>
+                            <%= project.id %>
+                        </li>
+                        <li><b>Keterangan:</b>
+                            <%= project.keterangan %>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary mb-4" href="/project">Kembali</a>
+                </div>
+
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <%- include ('../components/footer') %>
+</body>
+
+</html>

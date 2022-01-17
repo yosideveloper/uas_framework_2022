@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <%- include ('../components/head') %>
+        <title>Home</title>
+
+</head>
+
+<body>
+    <%- include ('../components/navbar2') %>
+
+        <h1 class="text-center mt-5"> (<%= project.length %> Project)</h1>
+        <center>
+            <div class="row">
+                <form action="/project" style="padding-top: 40px; padding-left: 40%;">
+                    <div class="input-group">
+                        <div class="form-outline">
+                            <input type="text" id="form2" name="keyword" class="form-control" />
+                        </div>
+                        <button type="submit" class="btn btn-warning">Cari</button>
+                    </div>
+
+                </form>
+            </div>
+        </center>
+        <div class="row justify-content-center">
+
+            <% if (project.length> 0){ %>
+                <% project.forEach (function(project) { %>
+                    <div class="col-lg-3 py-4">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <img class="card-img-top"
+                                    src="data:image/<%=project.img.contentType%>;base64,<%=project.img.data.toString('base64')%>">
+                                <br><br>
+                                <center>
+                                    <h5 class="card-title"><a href="/project/<%= project._id %>">
+                                            <%= project.jdlproject %>
+                                    </h5></a>
+                                </center>
+                                <p class="card-text text-muted">
+                                    <%= project.keterangan %>
+                                </p>
+                                <p class="card-text">Pemilihan palet warna yang tepat dan banyaknya animasi pada situs
+                                    membuat kamu tidak jenuh untuk terus melihat semua hal
+                                    yang ada di portofolio ini.
+
+                                    Salah satu hal yang paling menonjol dari portofolio ini adalah meskipun dipenuhi
+                                    dengan animasi, situs ini tidak
+                                    membutuhkan loading sama sekali dan semua fitur dalam situs dapat dibuka dalam waktu
+                                    sekejap..</p>
+                                <center>
+                                    <a class="btn btn-success"
+                                        href="/project/update/<%= project._id %>/<%= project.id %>/<%= project.jdlproject %>/<%= project.keterangan %>/<%= project.password %>">Update</a>
+                                    <a class="btn btn-danger" href="/project/hapus/<%= project._id %>">Hapus</a>
+                                    <a class="btn btn-warning" href="/project/<%= project._id %>">Detail</a>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <p>Data project kosong</p>
+                            <% } %>
+        </div>
+        <%- include ('../components/footer') %>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <%- include ('../components/head') %>
+        <title>Home</title>
+</head>
+
+<body>
+    <%- include ('../components/navbar2') %>
+
+        <!--/ Section Contact-Footer Star /-->
+        <section class="paralax-mf footer-paralax bg-image sect-mt4 route"
+            style="background-image: url(/assets/img/overlay-bg.jpg); margin-top: -10px;">
+            <div class="overlay-mf"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="contact-mf">
+                            <div id="contact" class="box-shadow-full">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title-box-2">
+                                            <h5 class="title-left">
+                                                Developer Engineering
+                                            </h5>
+                                        </div>
+                                        <div>
+                                            <form method="post" action="/project" enctype="multipart/form-data">
+                                                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                                <div id="errormessage"></div>
+                                                <div class="row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-group">
+                                                            <input type="text" name="id" class="form-control" id="id"
+                                                                placeholder="ID Project" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="jdlproject"
+                                                                id="jdlproject" placeholder="Judul Project"
+                                                                data-msg="Please enter at least 8 chars of subject" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="keterangan"
+                                                                id="keterangan" placeholder="Keterangan"
+                                                                data-rule="keterangan"
+                                                                data-msg="Please enter at least 8 chars of subject" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="password"
+                                                                id="keterangan" placeholder="password" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mb-3">
+                                                        <div class="form-group">
+                                                            <input type="file" class="form-control" name="image"
+                                                                id="img" placeholder="Gambar" required />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <button type="submit" value="Submit"
+                                                            class="button button-a button-big button-rouded">Send
+                                                            Data</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="title-box-2 pt-4 pt-md-0">
+                                            <h5 class="title-left">
+                                                Tentang Saya
+                                            </h5>
+                                        </div>
+                                        <div class="more-info">
+                                            <p class="lead">
+                                                Apa yang anda inginkan untuk saya kedepanya
+                                            </p>
+                                            <ul class="list-ico">
+                                                <li><span class="ion-ios-location"></span> Jln Gandrung Cungking
+                                                    Mojopanggung
+                                                    Banyuwangijawa timur indonesia</li>
+                                                <li><span class="ion-ios-telephone"></span> +62-8953-9516-1503</li>
+                                                <li><span class="ion-email"></span> yosimughnis7@gmail.com</li>
+                                            </ul>
+                                        </div>
+                                        <div class="socials">
+                                            <ul>
+                                                <li><a href=""><span class="ico-circle"><i
+                                                                class="ion-social-facebook"></i></span></a></li>
+                                                <li><a href=""><span class="ico-circle"><i
+                                                                class="ion-social-instagram"></i></span></a></li>
+                                                <li><a href=""><span class="ico-circle"><i
+                                                                class="ion-social-twitter"></i></span></a></li>
+                                                <li><a href=""><span class="ico-circle"><i
+                                                                class="ion-social-pinterest"></i></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--/ Section Contact-footer End /-->
+
+        <%- include ('../components/footer') %>
+
+
+</body>
+
+</html>
